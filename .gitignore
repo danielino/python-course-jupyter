@@ -1,0 +1,7 @@
+.venv
+.bash*
+.*cache
+__pycache__/
+.*ipy*
+.jupyter/
+.local
