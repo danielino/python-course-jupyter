@@ -1,1 +1,6 @@
-pip install jupyterlab flask pytest requests
+jupyterlab
+flask
+pytest
+requests
+linux-metrics
+
