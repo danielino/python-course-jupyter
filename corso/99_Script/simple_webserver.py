@@ -1,12 +1,12 @@
 import argparse
 import logging
 from flask import Flask, jsonify, request
+import psutil
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-
 
 
 @app.route("/")
@@ -15,10 +15,20 @@ def index():
         "status" : "ok"
     }), 200
 
-@app.route("/metrics")
-def index():
+
+@app.route("/stats")
+def stats():
+    logger.debug("return stats")
+    return jsonify({
+        "cpu" : psutil.cpu_percent(),
+        "memory" : dict(psutil.virtual_memory()._asdict())
+        
+    }), 200
     
     
+@app.route("/notfound")
+def ret404():
+    return jsonify({}), 404
 
 def main():
     parser = argparse.ArgumentParser()
