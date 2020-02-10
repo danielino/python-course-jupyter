@@ -2,5 +2,5 @@ jupyterlab
 flask
 pytest
 requests
-linux-metrics
-
+psutil
+sqlalchemy
