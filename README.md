@@ -5,8 +5,8 @@
 
 ```bash
 # clonare il corso
-git clone https://git.par-tec.it/formazione/corso-python
-cd corso-python
+git clone https://github.com/danielino/python-course-jupyter
+cd python-course-jupyter
 
 # creazione ed attivaizone virtualen
 python3.7 -m venv venv
